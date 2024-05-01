@@ -1,0 +1,42 @@
+
+.chat-container {
+  display: grid;
+  grid-template-areas: "header header" "sidebar chat" "sidebar footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  height: 100vh;
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+      grid-template-areas:
+          "header"
+          "chat"
+          "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr 60px;
+  }
+}
